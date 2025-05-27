@@ -4,6 +4,13 @@ You can install the package via composer:
 
 ```bash
 composer require tvice330/contact-list
+php artisan vendor:publish --provider="Tvice\ContactList\Providers\ContactListServiceProvider"
+php artisan vendor:publish --all
+php artisan migrate
+php artisan db:seed --class="Tvice\\ContactList\\Database\\Seeders\\ContactSeeder"
+cd vendor/tvice330/contact-list
+npm install
+npm run build
 ```
 
 ## Usage
