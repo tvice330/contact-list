@@ -19,8 +19,8 @@ cd vendor/tvicecontact-list
 npm install
 npm run build
 cd-
- php artisan vendor:publish --all
- php artisan db:seed --class=ContactSeeder
+php artisan vendor:publish --all
+php artisan db:seed --class=ContactSeeder
 ```
 
 ## Usage
