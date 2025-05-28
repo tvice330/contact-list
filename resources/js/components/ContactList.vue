@@ -109,7 +109,6 @@ const validateForm = () => {
     }
   })
 
-  // Очищуємо errors
   for (const key in errors) delete errors[key]
   Object.assign(errors, localErrors)
 

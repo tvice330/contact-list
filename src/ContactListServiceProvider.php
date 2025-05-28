@@ -25,12 +25,12 @@ class ContactListServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/../src/database/migrations');
         $this->loadRoutesFrom(__DIR__.'/../src/routes/web.php');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'contact-list');
 
         $this->publishes([
-            __DIR__ . '/../database/seeders' => $this->app->databasePath('seeders'),
+            __DIR__ . '/../src/database/seeders' => $this->app->databasePath('seeders'),
         ], 'contact-list-seeders');
         $this->publishes([
             __DIR__ . '/../dist' => $this->app->publicPath('vendor/tvice/contact-list/dist'),
