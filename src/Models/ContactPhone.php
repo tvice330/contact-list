@@ -5,24 +5,22 @@ namespace Tvice\ContactList\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Contact extends Model
+class ContactPhone extends Model
 {
     use HasFactory;
+
     /**
      * @var string
      */
-    protected $table = 'contacts';
+    protected $table = 'contact_phones';
 
     /**
      * @var string[]
      */
-    protected $fillable = ['first_name', 'last_name'];
+    protected $fillable = ['contact_id','number'];
 
-    /**
-     * @return HasMany
-     */
-    public function phones(): HasMany
+    public function contact(): BelongsTo
     {
-        return $this->hasMany(ContactPhone::class);
+        return $this->belongsTo(Contact::class);
     }
 }

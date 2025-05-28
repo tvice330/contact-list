@@ -52,7 +52,7 @@ class StoreContactRequest extends FormRequest
 
             'phones.*.required'      => __('Each phone number is required.'),
             'phones.*.string'        => __('Each phone number must be a valid string.'),
-            'phones.*.distinct'      => __('Phone numbers must be unique.'),
+            'phones.*.distinct'      => __('ContactPhone numbers must be unique.'),
             'phones.*.regex' => __(
                 'Each phone number must be in a valid format (7-20 digits, may include +, spaces, dashes, and parentheses).'
             ),

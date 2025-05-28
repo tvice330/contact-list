@@ -2,10 +2,11 @@
 
 namespace Tvice\ContactList\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Tvice\ContactList\Http\Requests\StoreContactRequest;
-use Tvice\ContactList\Service\ContactService;
+use Tvice\ContactList\Services\ContactService;
 use Tvice\ContactList\Models\Contact;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 class ContactController extends Controller
 {
     protected $service;
