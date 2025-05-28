@@ -1,9 +1,12 @@
 <?php
 
-namespace Tvice\ContactList\Providers;
+namespace Tvice\ContactList;
 
 use Illuminate\Support\ServiceProvider;
-use \Tvice\ContactList\Services\ContactService;
+use Tvice\ContactList\Services\ContactService;
+use function Tvice\ContactList\Providers\database_path;
+use function Tvice\ContactList\Providers\public_path;
+use function Tvice\ContactList\Providers\resource_path;
 
 class ContactListServiceProvider extends ServiceProvider
 {
