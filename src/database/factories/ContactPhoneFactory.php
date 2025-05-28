@@ -4,7 +4,7 @@ namespace Tvice\ContactList\Database\Factories;
 use Tvice\ContactList\Models\ContactPhone;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class PhoneFactory extends Factory
+class ContactPhoneFactory extends Factory
 {
     protected $model = ContactPhone::class;
 
