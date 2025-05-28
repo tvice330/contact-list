@@ -17,6 +17,7 @@ class CreatePhonesTable extends Migration
             )->constrained()
                 ->onDelete('cascade');
             $table->string('number');
+            $table->timestamps();
         });
     }
 
