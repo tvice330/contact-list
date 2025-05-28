@@ -1,6 +1,6 @@
 <?php
 
-namespace ContactList\Services;
+namespace Tvice\ContactList\Services;
 
 use Tvice\ContactList\Models\Contact;
 

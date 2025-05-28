@@ -1,6 +1,6 @@
 <?php
 
-namespace ContactList\Http\Requests;
+namespace Tvice\ContactList\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 class StoreContactRequest extends FormRequest

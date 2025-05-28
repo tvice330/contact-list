@@ -1,6 +1,6 @@
 <?php
 
-namespace ContactList\Model;
+namespace Tvice\ContactList\Model;
 
 class Phone extends Model
 {

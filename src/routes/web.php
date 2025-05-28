@@ -1,6 +1,6 @@
 <?php
 
-use ContactList\Http\Controllers\ContactController;
+use Tvice\ContactList\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('contacts')->group(function () {

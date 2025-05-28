@@ -1,11 +1,11 @@
 <?php
 
-namespace ContactList\Providers;
+namespace Tvice\ContactList\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use \Tvice\ContactList\Services\ContactService;
 
-class AppServiceProvider extends ServiceProvider
+class ContactListServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
