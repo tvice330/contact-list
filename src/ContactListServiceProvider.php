@@ -26,18 +26,24 @@ class ContactListServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
-        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'contact-list');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'contact-list');
+        $this->loadRoutesFrom(__DIR__ . '/../../routes/web.php');
+        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'contact-list');
+
         $this->publishes([
-            __DIR__.'/../../resources/views' => $this->app->resourcePath('views/vendor/contact-list'),
+            __DIR__ . '/../../resources/views' => $this->app->resourcePath('views/vendor/contact-list'),
         ]);
+
         $this->publishes([
-            __DIR__.'/../Database/migrations' => $this->app->databasePath('migrations'),
+            __DIR__ . '/../../database/migrations' => $this->app->databasePath('migrations'),
         ], 'migrations');
+
         $this->publishes([
-            __DIR__.'/../Database/seeders' => $this->app->databasePath('seeders'),
+            __DIR__ . '/../../database/seeders' => $this->app->databasePath('seeders'),
         ], 'seeders');
+
         $this->publishes([
-            __DIR__.'/../../dist' => $this->app->publicPath('vendor/tvice/contact-list/dist'),
+            __DIR__ . '/../../dist' => $this->app->publicPath('vendor/tvice/contact-list/dist'),
         ], 'public');
     }
 }
