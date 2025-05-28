@@ -28,16 +28,16 @@ class ContactListServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         $this->loadViewsFrom(__DIR__.'/../../resources/views', 'contact-list');
         $this->publishes([
-            __DIR__.'/../../resources/views' => resource_path('views/vendor/contact-list'),
+            __DIR__.'/../../resources/views' => $this->app->resourcePath('views/vendor/contact-list'),
         ]);
         $this->publishes([
-            __DIR__.'/../Database/migrations' => database_path('migrations'),
+            __DIR__.'/../Database/migrations' => $this->app->databasePath('migrations'),
         ], 'migrations');
         $this->publishes([
-            __DIR__.'/../Database/seeders' => database_path('seeders'),
+            __DIR__.'/../Database/seeders' => $this->app->databasePath('seeders'),
         ], 'seeders');
         $this->publishes([
-            __DIR__.'/../../dist' => public_path('vendor/tvice/contact-list/dist'),
+            __DIR__.'/../../dist' => $this->app->publicPath('vendor/tvice/contact-list/dist'),
         ], 'public');
     }
 }
