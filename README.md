@@ -14,12 +14,13 @@ in composer.json
     "tvice/contact-list": "dev-main"
   }
 php artisan vendor:publish --provider="Tvice\ContactList\Providers\ContactListServiceProvider"
-php artisan vendor:publish --all
 php artisan migrate
-php artisan db:seed --class="Tvice\\ContactList\\Database\\Seeders\\ContactSeeder"
-cd vendor/tvice330/contact-list
+cd vendor/tvicecontact-list
 npm install
 npm run build
+cd-
+ php artisan vendor:publish --all
+ php artisan db:seed --class=ContactSeeder
 ```
 
 ## Usage
