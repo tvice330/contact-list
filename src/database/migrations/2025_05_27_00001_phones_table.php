@@ -11,7 +11,7 @@ class CreateContactPhonesTable extends Migration
      */
     public function up(): void
     {
-        Schema::create('contact_phones', function (Blueprint $table) {
+        Schema::create('phones', function (Blueprint $table) {
             $table->id();
             $table->foreignId('contact_id'
             )->constrained()
@@ -25,6 +25,6 @@ class CreateContactPhonesTable extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('contact_phones');
+        Schema::dropIfExists('phones');
     }
 }

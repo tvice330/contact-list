@@ -4,7 +4,7 @@ namespace Tvice\ContactList\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Tvice\ContactList\Models\Contact;
-use Tvice\ContactList\Models\ContactPhone;
+use Tvice\ContactList\Models\Phone;
 
 class ContactSeeder extends Seeder
 {
@@ -15,7 +15,7 @@ class ContactSeeder extends Seeder
             ->create()
             ->each(function ($contact) {
                 $contact->phones()->createMany(
-                    ContactPhone::factory()
+                    Phone::factory()
                         ->count(rand(1, 3))
                         ->make()
                         ->toArray()

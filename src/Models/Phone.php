@@ -5,7 +5,7 @@ namespace Tvice\ContactList\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ContactPhone extends Model
+class Phone extends Model
 {
     use HasFactory;
 

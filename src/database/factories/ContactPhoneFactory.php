@@ -1,12 +1,12 @@
 <?php
 
 namespace Tvice\ContactList\Database\Factories;
-use Tvice\ContactList\Models\ContactPhone;
+use Tvice\ContactList\Models\Phone;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ContactPhoneFactory extends Factory
+class PhoneFactory extends Factory
 {
-    protected $model = ContactPhone::class;
+    protected $model = Phone::class;
 
     public function definition()
     {

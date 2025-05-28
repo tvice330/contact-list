@@ -23,6 +23,6 @@ class Contact extends Model
      */
     public function phones(): HasMany
     {
-        return $this->hasMany(ContactPhone::class);
+        return $this->hasMany(Phone::class);
     }
 }
