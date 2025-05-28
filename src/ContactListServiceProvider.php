@@ -25,18 +25,9 @@ class ContactListServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'contact-list');
-        $this->loadRoutesFrom(__DIR__ . '/../../routes/web.php');
-        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'contact-list');
-
-        $this->publishes([
-            __DIR__ . '/../../resources/views' => $this->app->resourcePath('views/vendor/contact-list'),
-        ]);
-
-        $this->publishes([
-            __DIR__ . '/../../database/migrations' => $this->app->databasePath('migrations'),
-        ], 'migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
+        $this->loadRoutesFrom(__DIR__.'/../../routes/web.php');
+        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'contact-list');
 
         $this->publishes([
             __DIR__ . '/../../database/seeders' => $this->app->databasePath('seeders'),
