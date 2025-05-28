@@ -3,7 +3,16 @@
 You can install the package via composer:
 
 ```bash
-composer require tvice330/contact-list
+in composer.json
+"repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/tvice330/contact-list"
+    }
+  ],
+  "require": {
+    "tvice330/contact-list": "dev-main"
+  }
 php artisan vendor:publish --provider="Tvice\ContactList\Providers\ContactListServiceProvider"
 php artisan vendor:publish --all
 php artisan migrate
