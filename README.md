@@ -11,7 +11,7 @@ in composer.json
     }
   ],
   "require": {
-    "tvice330/contact-list": "dev-main"
+    "tvice/contact-list": "dev-main"
   }
 php artisan vendor:publish --provider="Tvice\ContactList\Providers\ContactListServiceProvider"
 php artisan vendor:publish --all
