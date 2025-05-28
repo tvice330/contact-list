@@ -14,7 +14,9 @@
   },
   "autoload": {
     "psr-4": {
-      "Tvice\\ContactList\\": "src/"
+      "Tvice\\ContactList\\": "src/",
+      "Tvice\\ContactList\\Database\\Factories\\": "src/database/factories/",
+      "Tvice\\ContactList\\Database\\Seeders\\":   "src/database/seeders/"
     }
   },
   "extra": {
